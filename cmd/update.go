@@ -13,8 +13,8 @@ import (
 )
 
 const (
-	PorkbunAPIDNSUpdateEndpoint   string = "https://porkbun.com/api/json/v3/dns/editByNameType"
-	PorkbunAPIDNSRetrieveEndpoint string = "https://porkbun.com/api/json/v3/dns/retrieveByNameType"
+	PorkbunAPIDNSUpdateEndpoint   string = "https://api.porkbun.com/api/json/v3/dns/editByNameType"
+	PorkbunAPIDNSRetrieveEndpoint string = "https://api.porkbun.com/api/json/v3/dns/retrieveByNameType"
 	IpifyAPIEndpoint              string = "https://api.ipify.org?format=json"
 )
 
@@ -27,7 +27,7 @@ type Config struct {
 }
 
 // Request body for the DNS Edit Porkbun API endpoint,
-// as defined in the documentation: https://porkbun.com/api/json/v3/documentation
+// as defined in the documentation: https://api.porkbun.com/api/json/v3/documentation
 type RequestPorkbunDNSUpdate struct {
 	SecretKey string `json:"secretapikey"`
 	Key       string `json:"apikey"`
@@ -35,21 +35,21 @@ type RequestPorkbunDNSUpdate struct {
 }
 
 // Response body for the DNS Edit Porkbun API endpoint,
-// as defined in the documentation: https://porkbun.com/api/json/v3/documentation
+// as defined in the documentation: https://api.porkbun.com/api/json/v3/documentation
 type ResponsePorkbunDNSUpdate struct {
 	Status  string `json:"status"`
 	Message string `json:"message"`
 }
 
 // Request body for the DNS Retrieve Records Porkbun API endpoint,
-// as defined in the documentation: https://porkbun.com/api/json/v3/documentation
+// as defined in the documentation: https://api.porkbun.com/api/json/v3/documentation
 type RequestPorkbunDNSURetrieve struct {
 	SecretKey string `json:"secretapikey"`
 	Key       string `json:"apikey"`
 }
 
 // Response body for the DNS Retrieve Records Porkbun API endpoint,
-// as defined in the documentation: https://porkbun.com/api/json/v3/documentation
+// as defined in the documentation: https://api.porkbun.com/api/json/v3/documentation
 type ResponsePorkbunDNSURetrieve struct {
 	Status  string `json:"status"`
 	Records []struct {
